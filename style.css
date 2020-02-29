@@ -12,9 +12,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     /* double check google fonts, white space on images */
 
-    /* SWITCH TO REM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    /* Add wrapper for images below and object-fit for hero image....double check that this is the way to do it */
 
-    /* Add wrapper for images below and object-fit for hero image */
+
+    /* Email address seems off...what can I do better? */
 
     /* body {
     -webkit-font-smoothing: antialiased;
@@ -43,6 +44,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         font-family:'Cormorant Garamond';
         /* font-size: 22px; */
         font-size:1.1rem;
+
+        /* This is a tip Thiago shared in Slack */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     span {
@@ -50,20 +55,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     }
 
     img {
-        max-width:100%;
+        width:100%;
+        height:100%;
         object-fit: cover;
+
     }
 
     header {
         background-image:url(./animal-land-assets/image-1.jpg);
-        background-position: center;
         background-repeat: no-repeat;
-        /* background-size: cover; */
         position: relative;
-        height:100vh;
-        /* height:50%; */
+        height:90vh;
         background-size: cover;
-        direction: rtl;
+        /* direction: rtl; */
+        text-align: right;
+        /* background-position: center; */
+        /* height:50%; */
+        /* background-position-y: -40px; */
+        /* object-fit: cover; */
     }
 
     header li a {
@@ -88,7 +97,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         margin-right:15px;
     }
 
-    header .fa-bars {
+    header .fa-bars .image-wrapper {
         position: absolute;
         top: 25px;
         right: 25px;
@@ -117,7 +126,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         border: 2px solid transparent;
         text-transform: uppercase;
         padding: 9px 20px;
-        margin-top:25px;
+        margin-top:40px;
     }
 
     .s-story button:hover {
@@ -401,32 +410,196 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     @media(max-width:990px) {
 
+
+        header {
+            background-position-x: -140px;
+            height:633px;
+        }
+        .post1-info {
+            padding-bottom: 20px;
+            padding-top: 26px;
+        }
+
+        .post2-info {
+            padding-top: 20px;
+            padding-bottom: 25px;
+        }
+
+        .blog button {
+            font-size: 0.8rem;
+        }
+
+        .post1-info p, 
+        .post2-info p {
+            line-height:22px;
+
+        }
+
+        .shop {
+            padding:60px 0;
+        }
+
+        h3 {
+            font-size: 1.45rem;
+        }
+
+
     }
 
-    @media(max-width:720px) {
+    @media(max-width:871px) {
 
 
-        /* header {
-            
-        } */
+        img {
+            width: 100%;
+            /* object-fit: cover; */
+            height: 100%;
+        }
+        
+        header {
+            height: 560px;
+            background-position: center;
+            text-align: left;
+            /* background-size: cover; */
+        }
+
+        header nav {
+            padding-top:20px;
+        }
+
+        .fa-bars {
+            float:right;
+        }
+
+        h1 {
+            /* font-size: 5.3rem; */
+            font-size:4.2rem;
+            line-height:74px;
+            margin:0px;
+        }
 
         header .fa-bars {
             visibility: visible;
             color:#FCFCFC;
+            font-size:2.3rem;
         }
 
-        header nav ul {
+        header nav ul, .social {
+            height:0;
+            overflow:hidden;
+            /* padding:0px; */
+        }
+
+        .friends h2 {
+           padding:50px 0; 
+        }
+
+        .about-story {
+            margin-top:80px;
+            float:none;
+            width:100%;
+        }
+
+        /* You will need to change height to fit smaller screens */
+        .about-image {
+            float:none;
+            width:100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .post1,
+        .post2 {
+            text-align: center;
+        } 
+
+        .post1-image,
+        .post2-image {
+            float: none;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        } 
+
+        .post1-info,
+        .post2-info {
+            float: none;
+            width:100%;
+            padding:40px 0;
+        }
+
+        /* Seems like more code than needed, I tried .about-story button text-align center, but it didnt work....? */
+        .about-story p,
+        .about-story h2 {
+            text-align: left;
+        }
+
+
+        .about-story {
+            text-align: center;
+        }
+       
+
+
+        .bottom-nav a,
+        input[type="email"],
+        button {
+            font-size:0.8rem;
+        }
+
+        button {
+            margin-top:10px;
+        }
+
+    }
+
+
+     @media(max-width:720px) {
+
+
+        .friends h2 {
+            font-size: 2.25rem;
+        }
+
+        .friends .gallery li:last-child {
             height:0;
             overflow:hidden;
         }
 
+        /* ----------------------------------------Problem here with margin */
+        .friends .gallery li {
+            float: left;
+            margin-right: 40px;
+            width: calc(100%/2 - 40px);
+        }
+
+        /* .friends .gallery li:first-child {
+            margin-right: 40px;
+            width: calc(100%/2 - 40px); */
+       
+
+
+
+
+
 
     }
+
+
+
+
+
+
+
+
+
+
+
 
     @media(max-width:460px) {
-        
+        header h1 {
+            direction: ltr;
+            margin:0px;
+        }
     }
 
-    @media(max-width:350px) {
-        
-    }
+   
