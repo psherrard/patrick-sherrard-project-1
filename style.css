@@ -7,24 +7,15 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 
-    /* font-family: 'Fredericka the Great', ;
-    font-family: 'Cormorant Garamond', ;
-    font-family: 'Roboto', ;*/
+/* check that wrapper on the bottom images will hold on larger screens */
+
+/*check with the margin in the SOME OF OUR FRIENDS section*/
+
+/* Check why I can't commit, maybe because I renamed folder?  */
+
+/* link nav with id selectors? */
 
 
-    /* double check google fonts, white space on images */
-
-    /* Add wrapper for images below and object-fit for hero image....double check that this is the way to do it */
-
-
-    /* Email address seems off...what can I do better? */
-
-    /* body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-} */
-    
-    
     html {
     font-size: 125%;
     }
@@ -46,7 +37,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         font-family: 'Roboto';
         font-size:1rem;
 
-        /* This is a tip Thiago shared in Slack */
+    /* This is a tip Thiago shared in Slack about how to make fonts less bold. */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -76,7 +67,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         width:100%;
         height:100%;
         object-fit: cover;
-
     }
 
     header {
@@ -126,7 +116,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         margin-top:70px;
     }
 
-
     .s-story button {
         font-family:'Cormorant Garamond';
         font-size: 0.9rem;
@@ -170,10 +159,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     }
 
     .social {
-          text-align: center;
-          position: absolute;
-          bottom: 10px;
-          right:30px;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        right:30px;
     }
     .social .fab {
         color:#FCFCFC;
@@ -197,10 +186,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     /* -----------------------------------------------------------Problem here with margin, not sure why its not working?? */
 
-    .friends .gallery li {
+    .friends .gallery li img {
         float:left;
         width:calc(100%/3 - 40px);
         margin-right:40px;
+    }
+
+    .gallery li:nth-child(3) {
+        margin-right:0px;
     }
 
     .shop {
@@ -349,7 +342,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         font-family:'Cormorant Garamond';
         text-transform: uppercase;
         padding: 10px 20px;
-        /* font-size: 20px; */
         font-size: 1rem;
     }
 
@@ -374,12 +366,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     @media(max-width:1260px) {
 
         .blog p {
-            /* maybe not body p tag */
             font-size: 0.9rem;
-        }
-
-        header {
-            /* background-position-x: -260px; */
         }
 
         .post1-info {
@@ -401,10 +388,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         .bottom-nav li {
             font-size:0.9rem;
         }
-
-
-        /* resize the margins in post-1/2 and font size */
-
     }
 
     @media(max-width:1064px){
@@ -412,11 +395,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         .blog p {
             font-size: 0.8rem;
         }
-
     }
 
     @media(max-width:990px) {
-
 
         header {
             background-position-x: -140px;
@@ -444,11 +425,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
             padding-top:45px;
             padding-bottom:0px;
         }
-
-        /* .post2-info {
-            padding-top: 25px;
-            padding-bottom: 25px;
-        } */
 
         .contact {
             padding: 60px 0;
@@ -642,8 +618,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         }
 
         .group {
-            margin-top:35px;
+            margin-top:45px;
         }
+
+        /* h3 span {
+            line-height: 40px;
+        } */
     }
 
     @media (max-width:620px) {
@@ -664,23 +644,22 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     @media (max-width:500px) {
 
-    }
-
-
-
-
-
-
-
-
-
-
-
-    @media(max-width:460px) {
-        /* header h1 {
-            direction: ltr;
-            margin:0px;
-        } */
+        header {
+            background-position-x: -242px;
+        }
+        
+        header h1 {
+            font-size: 1.4rem;
+            line-height: 28px;
+        }
+        
+        header .fa-bars {
+            font-size: 1.4rem;
+        }
+        
+        .shop h3 {
+            font-size:1.45rem;
+        }
     }
 
    
