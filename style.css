@@ -11,10 +11,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /*check with the margin in the SOME OF OUR FRIENDS section*/
 
-/* Check why I can't commit, maybe because I renamed folder?  */
 
-/* link nav with id selectors? */
-
+    /* I tried different way to clear the extra space on the parent container and couldnt figure it out. I ended up kinda cheating and adding margin-left to even it all out. Im aware this isnt the right way to go. */
 
     html {
     font-size: 125%;
@@ -186,15 +184,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     /* -----------------------------------------------------------Problem here with margin, not sure why its not working?? */
 
-    .friends .gallery li img {
+    .friends .gallery li {
         float:left;
         width:calc(100%/3 - 40px);
         margin-right:40px;
     }
 
+    .gallery li:last-child {
+        margin-right:0;
+    }
+
+    .gallery {
+        margin-left:20px;
+    }
+
+    /* 
     .gallery li:nth-child(3) {
         margin-right:0px;
-    }
+    } */
 
     .shop {
         background-color: #152D20;
@@ -607,6 +614,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
             width: calc(100%/2 - 40px);
         }
 
+        .gallery {
+            margin-left:40px;
+        }
+
         .shop {
             text-align: center;
         }
@@ -620,14 +631,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         .group {
             margin-top:45px;
         }
-
-        /* h3 span {
-            line-height: 40px;
-        } */
     }
 
     @media (max-width:620px) {
-
 
         .about-image {
             float:none;
@@ -644,6 +650,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     @media (max-width:500px) {
 
+        .bottom-nav li{
+            font-size:0.7rem;
+        }
         header {
             background-position-x: -242px;
         }
