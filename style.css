@@ -7,13 +7,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 
-/* check that wrapper on the bottom images will hold on larger screens */
-
-/*check with the margin in the SOME OF OUR FRIENDS section*/
-
-
-   
-
     html {
     font-size: 125%;
     }
